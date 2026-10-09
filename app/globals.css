@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0b0b0c;
+  --ink-2: #141416;
+  --panel: #161618;
+  --panel-2: #1d1d20;
+  --line: #2a2a2e;
+  --line-2: #3a3a40;
+  --cream: #f3eee4;
+  --cream-dim: #c8c0b2;
+  --mute: #8b8578;
+  --accent: #e8a87c;
+  --accent-2: #c9845a;
+  --good: #8fbc8f;
+  --warn: #d4a017;
+  --danger: #c45c5c;
+  --tool: #0f0f11;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-cream: var(--cream);
+  --color-cream-dim: var(--cream-dim);
+  --color-mute: var(--mute);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-good: var(--good);
+  --color-warn: var(--warn);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-instrument);
+}
+
+html,
+body {
+  background: var(--ink);
+  color: var(--cream);
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(232, 168, 124, 0.35);
+  color: var(--cream);
+}
+
+.serif {
+  font-family: var(--font-instrument), ui-serif, Georgia, serif;
+}
+
+.studio-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.checker {
+  background-color: #1a1a1c;
+  background-image:
+    linear-gradient(45deg, #121214 25%, transparent 25%),
+    linear-gradient(-45deg, #121214 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #121214 75%),
+    linear-gradient(-45deg, transparent 75%, #121214 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #3a3a40;
+  border-radius: 99px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
